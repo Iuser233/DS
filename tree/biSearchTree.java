@@ -135,6 +135,7 @@ public void levelorder() {
 			queue[rear]=queue[front].rchild;
 		}
 	}
+System.out.println();
 }
 //·â×°
 public void inorder() {
@@ -236,16 +237,29 @@ public int gethight(biSearchNode p) {
 		
 public void printleaves(biSearchNode p) {
 	if (p==null) {
-		return ;	
+		return ;
+		
 	}
-	else {
-		if(p.lchild==null||p.rchild!=null)
-		{
-			System.out.print(p.data+" "); 
+	else  {
+		if (p.lchild==null&&p.rchild==null) {
+			System.out.print(p.data+" ");
 		}
-	printleaves(p.lchild);
-	printleaves(p.rchild);
+		printleaves(p.lchild);
+		printleaves(p.rchild);	
+	}	
+}
+public biSearchNode exchange(biSearchNode root  ) {
+	if (root==null) {
+		return null;			
 	}
+	biSearchNode left=exchange(root.lchild);
+	biSearchNode right=exchange(root.rchild);	 
+	root.lchild=right;
+	root.rchild=left;
+	return root;
 }
 
+public void exchange() {
+	exchange(root);
+}
 }
