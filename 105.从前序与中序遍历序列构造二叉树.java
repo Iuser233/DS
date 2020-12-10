@@ -30,9 +30,10 @@ Map<Integer,Integer> inMap=new HashMap<Integer,Integer>();
 
 }
 public TreeNode  buildNode(int[] preorder,int prestart,int preend,int [] inorder,int instart,int inend,Map<Integer, Integer>) {
-    if (preorder) {
-        
+    if (preorder>preend||instart>inend) {
+        return null;
     }
+    TreeNode root=new tree
 }
 
 
