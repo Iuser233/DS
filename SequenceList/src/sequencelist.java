@@ -77,6 +77,7 @@ public class sequencelist {
             else{
                 return -1;
             }
+            6546
         }
     }
     return x;
