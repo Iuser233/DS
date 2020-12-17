@@ -28,6 +28,7 @@ b.有一颗树为空
 c.两棵树都不为空时先判断它们的根节点是否一样，如果不相同，说明这两棵树不同
 否则在对这个节点的左右子树依次进行比较。
 
+
 */
 class Solution {
     public boolean isSameTree(TreeNode p, TreeNode q) {
