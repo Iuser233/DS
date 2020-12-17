@@ -79,6 +79,7 @@ class Solution {
             }
         }
         return queue1.isEmpty()&&queue2.isEmpty();  //最后比较完了所有节点在判断似乎不是两个队列都为空，是的说明两棵树完全相同
+
         
     }
     }
