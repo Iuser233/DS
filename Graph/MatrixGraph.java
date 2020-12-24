@@ -1,7 +1,9 @@
 package Graph;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+
 
 
 public class MatrixGraph {
@@ -23,7 +25,7 @@ public class MatrixGraph {
 		}
 	}
 
-	public void insertEdges(int t,int x) {
+	public void insertEdges(int t,int x) {//可以设置权重
 		edges[t][x]=1;
 		edges[x][t]=1;
 		e++;
@@ -40,7 +42,7 @@ public class MatrixGraph {
 		q=queue.poll();
 		for (j = 0; j<vnums ; j++) {
 			//访问第i个顶点未曾访问的顶点
-			if (edges[q][j]==1&&visied[j]==false) {
+			if (edges[q][j]==1&&visied[j]==false) {//没有访问并且顶点之间有联系
 				System.out.print(value[j]+" ");
 				visied[j]=true;
 				queue.add(j);//第j个顶点入队
@@ -58,6 +60,33 @@ public class MatrixGraph {
 			}
 		}
 	}
+	public class closeedge{
+		int adjvax;//顶点
+		int lowcost;//?边上的权值；
+		public closeedge(int v,int i) {//初始化
+		adjvax=v;
+		lowcost=i;
+			// TODO Auto-generated constructor stub
+		}
+		public  closeedge() {//封装
+			adjvax=0;
+			lowcost=0;
+			// TODO Auto-generated constructor stub
+		}
+		}
+	int maxsize=100;
+	public void MinSpanTree_Prim(int v) {
+		int i,k,j;
+		closeedge edge;
+		ArrayList<closeedge> edges=new  ArrayList<closeedge>(maxsize);
+		for (int l = 0; l < maxsize; l++) {
+			edge=new closeedge();
+			edges.add(l,edge);
+		}//初始化辅助数组
+		
+		
+	}
+
 	
 	public static void main(String[] args) {
 		MatrixGraph graph=new MatrixGraph(5);
@@ -75,7 +104,7 @@ for (int i = 0; i <graph.vnums; i++) {
 	System.out.println(" ");
 }
 		graph.DFS(1);
-		System.err.println("");
+		System.out.println(" ");
 		graph.BFS(1);
 		
 	}
