@@ -1,0 +1,50 @@
+package shiyan8;
+
+import java.io.IOException;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.sun.jdi.connect.spi.Connection;
+
+public class inserttext {
+
+public static void main(String[] args) {
+        Statement state=null;
+        Connection conn=null;
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+             conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost", "root", "123456");
+            state = ((java.sql.Connection) conn).createStatement();
+            String sql="INSERT  INTO `book`(`bookno`,`bookname`,`author`,`publisher`,`publishyear`,`price`,`state`,`bookstore`) \r\n" + 
+            		"VALUES ('ISBN9787111 ','数据库系统原理','李晖','机械',2010,'69.0','未借','2');";
+            int count = state.executeUpdate(sql);
+            if (count>0){
+                System.out.println("添加成功");
+            }else {
+                System.out.println("添加失败");
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            //避免空指针异常
+          if (state!=null){
+              try {
+                  state.close();
+              } catch (SQLException e) {
+                  e.printStackTrace();
+              }
+          }
+            if (conn!=null){
+                try {
+					conn.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+            }
+        }
+    }
+}

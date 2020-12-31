@@ -1,0 +1,11 @@
+package sorting;
+
+public class text {
+public static void main(String[] args) {
+	int []arr1=Mysort.randomInt(100, 10000);
+Mysort s1=new Mysort();
+int n=arr1.length;
+s1.merge_sort(arr1, n);
+
+}
+}

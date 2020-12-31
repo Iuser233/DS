@@ -1,0 +1,40 @@
+package shiyan8;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+public class bookinsert {
+	private DButil dbUtil=new DButil();
+	public static void main(String[] args) {
+		bookinsert bookinsert=new bookinsert();
+		bookinsert.insert_book(); 
+	}
+	public void insert_book() {
+//		Connection con=null;
+//		Statement stmt;
+//		try {
+//			try {
+//				con=dbUtil.getCon();
+//			} catch (Exception e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//			stmt = con.createStatement();
+//			String sql="INSERT INTO book VALUES('TP110','算法导论','隐函数','电子',2006,'46.0','未借','6');";
+//			stmt.executeUpdate(sql);
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		Connection con=null;
+		PreparedStatement pstmt = null;
+		try {
+			con=dbUtil.getCon();
+			String sql="INSERT INTO book VALUES('TP110','算法导论','隐函数','电子',2006,'46.0','未借','6');";
+			pstmt=con.prepareStatement(sql);
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	    }
+	}
+	
