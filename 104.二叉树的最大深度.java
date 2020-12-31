@@ -22,6 +22,17 @@
  */
 class Solution {
     public int maxDepth(TreeNode root) {
+int lh,rh,max=0;
+
+if (root!=null) {
+ 
+lh=maxDepth(root.left);
+rh=maxDepth(root.right);
+max=lh>rh?lh:rh;
+ return max+1;  
+}else{
+    return 0;
+}
 
     }
 }
