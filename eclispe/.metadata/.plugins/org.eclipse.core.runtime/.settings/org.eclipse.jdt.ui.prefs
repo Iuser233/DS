@@ -1,0 +1,15 @@
+content_assist_autoactivation_triggers_java=.qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM
+content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaPostfixProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.javaChainProposalCategory\u0000
+content_assist_favorite_static_members=org.junit.Assert.*;org.junit.Assume.*;org.junit.jupiter.api.Assertions.*;org.junit.jupiter.api.Assumptions.*;org.junit.jupiter.api.DynamicContainer.*;org.junit.jupiter.api.DynamicTest.*
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="lianbiao.Node"><rhs name\="lianbiao.Node"/></lhs><lhs name\="lianbiao.singlelinklist"><rhs name\="lianbiao.singlelinklist"/></lhs><lhs name\="lianbiao.singlelinklist$Solution"><rhs name\="lianbiao.singlelinklist$Solution"/></lhs><lhs name\="linklist._1_\u4E24\u6570\u4E4B\u548C$Solution"><rhs name\="linklist._1_\u4E24\u6570\u4E4B\u548C$Solution"/></lhs><lhs name\="linklist._4\u5BFB\u627E\u4E24\u4E2A\u6B63\u5E8F\u6570\u7EC4\u7684\u4E2D\u4F4D\u6570$Solution"><rhs name\="linklist._4\u5BFB\u627E\u4E24\u4E2A\u6B63\u5E8F\u6570\u7EC4\u7684\u4E2D\u4F4D\u6570$Solution"/></lhs><lhs name\="stack.squencestack"><rhs name\="stack.squencestack"/></lhs><lhs name\="java.util.Vector"><rhs name\="java.util.Stack"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.Stack"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.Stack"/><rhs name\="java.util.LinkedList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.Stack"/><rhs name\="java.util.LinkedList"/></lhs><lhs name\="java.util.RandomAccess"><rhs name\="java.util.Stack"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.util.Stack"/></lhs><lhs name\="java.util.AbstractList"><rhs name\="java.util.Stack"/></lhs><lhs name\="java.util.AbstractCollection"><rhs name\="java.util.Stack"/></lhs><lhs name\="java.util.Stack"><rhs name\="java.util.Stack"/></lhs><lhs name\="java.util.Map"><rhs name\="java.util.HashMap"/></lhs><lhs name\="java.util.Queue"><rhs name\="java.util.LinkedList"/></lhs><lhs name\="java.util.Deque"><rhs name\="java.util.LinkedList"/></lhs><lhs name\="queue.sequenceQuence"><rhs name\="queue.sequenceQuence"/></lhs><lhs name\="stack01.sequencestack"><rhs name\="stack01.sequencestack"/></lhs><lhs name\="stack01.linkstack"><rhs name\="stack01.linkstack"/></lhs></history>
+content_assist_number_of_computers=18
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+markOccurrences=false
+org.eclipse.jdt.ui.formatterprofiles.version=18
+org.eclipse.jdt.ui.visibility.order=B,V,R,D,
+outlinesortoption=T,SF,SI,SM,F,I,C,M,
+spelling_locale_initialized=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true
