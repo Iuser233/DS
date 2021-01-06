@@ -19,8 +19,8 @@ public class consumeinsert {
 	  PreparedStatement pstmt = null;//准备发语句
 	  try {
 		con=dbUtil.getCon();
-String sql="INSERT INTO consume VALUES ('B19041831','糖醋排骨','2020-12-31 18:26:25','13.5');\r\n" + 
-		"";		// 获取执行sql语句对象
+String sql="INSERT INTO dishes VALUES (1,'木耳炒肉','9.5'); \r\n" + 
+		"" ;		// 获取执行sql语句对象
 		
         pstmt=con.prepareStatement(sql);   //发语句   
         System.out.println("success");

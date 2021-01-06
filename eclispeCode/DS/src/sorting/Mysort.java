@@ -387,13 +387,14 @@ public static void main(String[] args) {
 //	System.out.println("简单选择排序");
 //	select_sort(a, n);
 //	selection_sort(a, n);
-	int []arr1=Mysort.randomInt(100, 10010);
+	int []arr1=Mysort.randomInt(1000, 50010);
 	int n=arr1.length;
 	int []a = arr1;
 	int []b=arr1;
 	int []c=arr1;
 	int []d=arr1;
 	int []e=arr1;
+	int [] m = arr1;
 
 //merge_sort(a);
 //Mysort.print(a);
@@ -411,7 +412,7 @@ System.out.println("关键字序列：");
 	System.out.println("冒泡时间:" + (endtime-starttime)+"ms");
 
 	long starttime1=System.currentTimeMillis();
-insert_sort(a, n);
+insert_sort(m, n);
 long endtime1=System.currentTimeMillis();
 	System.out.println("直接插入时间:" + (endtime1-starttime1)+"ms");
 

@@ -30,7 +30,7 @@ public class ¿®∫≈∆•≈‰ {
 		return stack.isEmpty();
 	}
 	public static void main(String[] args) {
-		String string="{(([{}]))}";
+		String string="  ";
 		System.out.println(math(string));
 	}
 }

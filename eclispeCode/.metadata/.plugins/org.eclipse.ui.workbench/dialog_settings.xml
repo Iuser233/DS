@@ -31,6 +31,9 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="D:\onelong\OneDrive - for personal\Desktop\01\002.zip"/>
+			<item value="D:\onelong\OneDrive - for personal\Documents\0012.zip"/>
+			<item value="C:\Users\Lenovo\Desktop\001.zip"/>
 			<item value="C:\Users\Lenovo\Desktop\0shu.zip"/>
 			<item value="C:\Users\Lenovo\Desktop\023.zip"/>
 		</list>

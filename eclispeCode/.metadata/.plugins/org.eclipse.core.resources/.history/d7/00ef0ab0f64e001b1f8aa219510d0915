@@ -1,0 +1,49 @@
+package kechengshji;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+
+
+public class view_order {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 view_order b=new view_order();
+		 b.ser_book();
+	}
+	private dbutil dbUtil=new dbutil();//创建对象，下面要用
+	public void ser_book()
+	{	
+	  Connection con=null;
+	  PreparedStatement pstmt = null;//准备发语句
+      ResultSet rs = null;
+
+	  try {
+		con=dbUtil.getCon();
+String sql="SELECT * FROM stu_con";
+;		// 获取执行sql语句对象
+		
+        pstmt=con.prepareStatement(sql);   //发语句   
+        System.out.println("success");
+        
+        pstmt.executeUpdate(sql);
+        rs=pstmt.executeQuery();	//执行查询给rs
+
+        // 执行查询操作
+//        rs=pstmt.executeQuery();	//执行查询给rs
+        //处理结果集
+     	while (rs.next()) {
+            System.out.println("bookname："+rs.getString(1)+"     auther："+rs.getString(2)+"     price："+rs.getString(3)+"     bookno："+rs.getString(4));
+
+		}    
+	  }
+		 catch(Exception e)
+		    {
+			e.printStackTrace();
+		     }
+		  
+	}
+	
+
+}

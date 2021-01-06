@@ -26,7 +26,7 @@ public class student_consume {
       int canborrow=0;
 	  try {
 		con=dbUtil.getCon();
-		String sql="call  student_consume(?);";
+		String sql="call  order_recoder(?);";
 		// 获取执行sql语句对象
 		cstmt=con.prepareCall(sql);
         // 准备参数
@@ -34,7 +34,7 @@ public class student_consume {
         rs=cstmt.executeQuery();	//执行查询给rs
 
     	while (rs.next()) {
-            System.out.println("学号："+rs.getString(1)+"     姓名："+rs.getString(2)+"     餐厅："+rs.getString(3)+"     窗口号："+rs.getString(4)+"     菜名："+rs.getString(5)+"     价格："+rs.getString(6)+"     用餐时间："+rs.getString(7));
+            System.out.println("订单号："+rs.getString(1)+"     学号："+rs.getString(2)+"     时间："+rs.getString(3)+"     菜名："+rs.getString(4)+"     个数："+rs.getString(5)   );
 
 		}
         
