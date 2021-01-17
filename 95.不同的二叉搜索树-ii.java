@@ -29,34 +29,40 @@ import jdk.nashorn.api.tree.Tree;
  */
 class Solution {
     public List<TreeNode> generateTrees(int n) {
-        if (n==0) {
+        if (n == 0) {
             return new LinkedList<TreeNode>();
-
         }
-        return generateTrees(1,n);
+        return generateTrees(1, n);
     }
-    public list<TreeNode> generateTrees(int start,int end){
-        List<TreeNode> allTree=new LinkedList<TreeNode>();
-        if (start>end) {
-            allTree.add(null);
-            return allTree;
+
+    public List<TreeNode> generateTrees(int start, int end) {
+        List<TreeNode> allTrees = new LinkedList<TreeNode>();
+        if (start > end) {
+            allTrees.add(null);
+            return allTrees;
         }
-        for (int i =start; i < end; i++) {
-            List<TreeNode> leftTrees=generateTrees(start,i-1);
-            List<TreeNode> rightTrees=generateTrees(i+1,end);
-            
-            for (TreeNode left: leftTrees) {
-                for (TreeNode right : leftTrees) {
+
+        // 枚举可行根节点
+        for (int i = start; i <= end; i++) {
+            // 获得所有可行的左子树集合
+            List<TreeNode> leftTrees = generateTrees(start, i - 1);
+
+            // 获得所有可行的右子树集合
+            List<TreeNode> rightTrees = generateTrees(i + 1, end);
+
+            // 从左子树集合中选出一棵左子树，从右子树集合中选出一棵右子树，拼接到根节点上
+            for (TreeNode left : leftTrees) {
+                for (TreeNode right : rightTrees) {
                     TreeNode currTree = new TreeNode(i);
-                    currTree.left=left;
-                    currTree.right=right;
-                    allTree.add(currTree);
+                    currTree.left = left;
+                    currTree.right = right;
+                    allTrees.add(currTree);
                 }
             }
         }
-    return allTree;
+        return allTrees;
     }
-
 }
+
 // @lc code=end
 
