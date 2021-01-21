@@ -1,3 +1,8 @@
+import java.util.LinkedList;
+import java.util.List;
+
+import jdk.internal.jimage.ImageReader.Node;
+
 /*
  * @lc app=leetcode.cn id=589 lang=java
  *
@@ -26,8 +31,24 @@ class Node {
 
 class Solution {
     public List<Integer> preorder(Node root) {
-        
+        List<Integer> res = new LinkedList<>();
+        preorder1(root, res);
+        return res;
+
+        }
+    
+
+    public void preorder1(Node root, List<Integer> res) {
+        if (root==null) {
+            return ;
+        }
+        res.add(root.val);
+        for (Node  iteam : root.children) {
+            preorder1(iteam, res);
+        }
+
     }
 }
+
 // @lc code=end
 
