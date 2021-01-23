@@ -1,5 +1,7 @@
 import java.util.LinkedList;
 
+import javax.swing.tree.TreeNode;
+
 /*
  * @lc app=leetcode.cn id=144 lang=java
  *
@@ -26,19 +28,19 @@ class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
    //1.定义一个返回值数组result
    List<Integer> result=new LinkedList<Integer>();
-   stack <TreeNode> toVisit=new stack <TreeNode>();
+//    Stack <TreeNode> toVisit = new LinkedList<>();
+   Stack<TreeNode> toVisit = new Stack<TreeNode>();
+
 if (root==null) {
     return result;
 }
 toVisit.push(root);
-while (toVisit!=null) {
+while (!toVisit.empty()) {
     TreeNode visiting=toVisit.pop();
-    result.add(visiting.val);
-    if (condition) {
-        
-    }
+    if (visiting.right!=null) toVisit.add(visiting.right);
+    if (visiting.left!=null) toVisit.add(visiting.left);
 }
-   
+   return result;
     }
 }
 // @lc code=end

@@ -5,9 +5,9 @@ import java.util.Stack;
 import jdk.internal.jimage.ImageReader.Node;
 
 /*
- * @lc app=leetcode.cn id=589 lang=java
+ * @lc app=leetcode.cn id=590 lang=java
  *
- * [589] N叉树的前序遍历
+ * [590] N叉树的后序遍历
  */
 
 // @lc code=start
@@ -31,25 +31,22 @@ class Node {
 */
 
 class Solution {
-    public List<Integer> preorder(Node root) {
-        List<Integer> res = new LinkedList<>();
-Stack <Node> stack= new LinkedList<>();
-if (root==null) {
-    return res;
-}
-
-stack.push(root.val);
-while (!stack.isEmpty()) {
-    Node 
-    for (Node node : root.children) {
-        stack.
+    public List<Integer> postorder(Node root) {
+ LinkedList<Node> stack=new LinkedList<>();
+ LinkedList <Integer> output=new LinkedList<>();
+ if (root==null) {
+     return output;
+ } 
+ stack.add(root);
+ while (!stack.isEmpty()) {
+     Node node=stack.pollLast();
+    output.addFirst(node.val);
+    for (Node iteam : node.children) {
+        stack.addLast(iteam);
     }
+ }
+return output;
 }
-        }
-    
-
-
 }
-
 // @lc code=end
 
