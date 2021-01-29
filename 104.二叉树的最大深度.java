@@ -1,3 +1,8 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+import javax.swing.tree.TreeNode;
+
 /*
  * @lc app=leetcode.cn id=104 lang=java
  *
@@ -22,18 +27,30 @@
  */
 class Solution {
     public int maxDepth(TreeNode root) {
-int lh,rh,max=0;
-
-if (root!=null) {
- 
-lh=maxDepth(root.left);
-rh=maxDepth(root.right);
-max=lh>rh?lh:rh;
- return max+1;  
-}else{
+//迭代法求高度
+if (root==null) {
     return 0;
 }
 
+Queue que=new LinkedList<>();
+que.add(root);
+int deepth=0;
+while (!que.isEmpty()) {
+ int n=que.size();
+ deepth=deepth+1;
+
+for (int i = 0; i < n; i++) {
+    TreeNode node= (TreeNode) que.poll();
+   if (node.left!=null) {
+    que.add(node.left);   
+   }
+   if (node.right!=null) {
+    que.add(node.right);       
+   }
+
+}   
+}
+return deepth;
     }
 }
 // @lc code=end

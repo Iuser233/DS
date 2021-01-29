@@ -1,3 +1,9 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
+
+import javax.swing.tree.TreeNode;
+
 /*
  * @lc app=leetcode.cn id=102 lang=java
  *
@@ -16,26 +22,30 @@
  */
 class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
-        List<List<Integer>> res=new Arraylist<List<Integer>>();
+        // List<List<Integer>> ret=new Arraylist<List<Integer>>();
+
+        List<List<Integer>> res = new ArrayList<List<Integer>>();
+
         Queue <TreeNode> queue= new LinkedList<TreeNode>();
         if (root!=null) {
          
         queue.add(root);   
         }
         while (!queue.isEmpty()) {
-            List<Integer> level=new Arraylist<Integer>();
-
+            // List<Integer> level=new Arraylist<Integer>();
+List<Integer> level=new ArrayList<>();
             int n=queue.size();
             for (int i = 0; i < n; i++) {
                 TreeNode node=queue.poll();
                 level.add(node.val);
             if (node.left!=null) {
-                queue.add(node.left);
+                queue.offer(node.left);
             };
             if (node.right!=null) {
-                queue.add(node.right);
+                queue.offer(node.right);
             }   
-            }        res.add(level);
+            } 
+                res.add(level);
 
         }
         return res;

@@ -3,6 +3,8 @@ import java.util.Queue;
 
 import javax.swing.tree.TreeNode;
 
+import jdk.nashorn.api.tree.Tree;
+
 /*
  * @lc app=leetcode.cn id=101 lang=java
  *
@@ -21,17 +23,33 @@ import javax.swing.tree.TreeNode;
  */
 class Solution {
     public boolean isSymmetric(TreeNode root) {
-        return check(root,root);
+if (root==null) {
+    return true;
+
+}
+
+ return issame(root.left, root.right);
+
     }
-    public boolean  check(TreeNode u,TreeNode v) {
-      if (u==null&&v==null) {
-          return true;
-      }
-      if (u==null||v==null) {
-          return false;
-      }
-      return u.val==v.val&&check(u.left, v.right)&&check(u.right, v.left);
+    public boolean issame(TreeNode left,TreeNode right) {
+        if (left==null&&right==null) {
+            return true;
+        }else if(left!=null&&right==null){
+            return false;
+
+        }else if (left==null&&right!=null) {
+            return false;
+        }
+        else if (right.val!=left.val) {
+            return false;
+        }
+boolean outside= issame(left.left, right.right);
+boolean indside=issame(left.right, right.left);
+return outside&&indside;
+
+
     }
+  
 }
 // @lc code=end
 
