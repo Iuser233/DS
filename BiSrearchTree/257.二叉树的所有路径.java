@@ -1,3 +1,11 @@
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.management.relation.Role;
+import javax.swing.tree.TreeNode;
+
+import singlelist.node;
+
 /*
  * @lc app=leetcode.cn id=257 lang=java
  *
@@ -22,7 +30,20 @@
  */
 class Solution {
     public List<String> binaryTreePaths(TreeNode root) {
+List<String> res=new ArrayList<>();
+dfs(root, "", res);
+return res;
 
+    }
+    public void dfs(TreeNode node,String path,List<String> res) {
+        if (node==null) {
+            return ;
+        }
+        if (node.left==null&&node.right==null) {
+            res.add(path+node.val);
+        }
+        dfs(node.left, path+node.val +"->", res);
+        dfs(node.right, path+node.val +"->", res);
     }
 }
 // @lc code=end
